@@ -1,5 +1,5 @@
 {% set name = "mappyfile" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 4dbdb49838d69189727859a42cfaae29dd1a193b71bd0d5c2c62a93b8c944eda
+  sha256: 9a846d04ded66a792138767a6a1f7bbf0807396a61550d18d1977a40aba6519c
 
 build:
   number: 0
