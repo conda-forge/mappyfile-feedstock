@@ -10,7 +10,7 @@ source:
   sha256: 43ada1b98cfc0fd670e6f384d74b15f6601aadb5ab9e1f1d506e839a37a9b8dc
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - mappyfile=mappyfile.cli:main
@@ -20,20 +20,21 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - click
     - jsonref ==1.1.0
     - jsonschema >=4.18.0
     - lark >=1.1.5
     - setuptools
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   imports:
     - mappyfile
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
     - mappyfile --help
